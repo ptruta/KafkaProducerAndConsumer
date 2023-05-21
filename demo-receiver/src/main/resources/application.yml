@@ -1,0 +1,51 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env,health
+  endpoint:
+    env:
+      enabled: true
+    health:
+      enabled: true
+
+server:
+  port: 8080
+
+app:
+  kafka:
+    environment_prefix: local
+    kafka_group_id: 0001
+    topic:
+      payment: payment_2023
+    hostname: localhost
+
+spring:
+  profiles: kafka
+  application:
+    name: demo-receiver
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: non_empty
+  cloud:
+    function:
+      definition: inputPayment
+    stream:
+      default-binder: kafka
+      bindings:
+        inputPayment-in-0:
+          content-type: application/json
+          destination: ${app.kafka.topic.payment}
+          group: ${spring.application.name}-${app.kafka.kafka_group_id}
+      kafka:
+        bindings:
+          inputPayment-in-0:
+            consumer:
+              enable-dlq: false
+        binder:
+          configuration:
+            request.timeout.ms: 1000
+            max.block.ms: 3000
+          brokers: ${app.kafka.hostname}

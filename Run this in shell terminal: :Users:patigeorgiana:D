@@ -1,0 +1,2 @@
+Run this in shell terminal: /Users/patigeorgiana/Downloads/kafka_2.12-3.3.1/bin/zookeeper-server-start.sh /Users/patigeorgiana/Downloads/kafka_2.12-3.3.1/config/zookeeper.properties
+Run this in another terminal: /Users/patigeorgiana/Downloads/kafka_2.12-3.3.1/bin/kafka-server-start.sh  /Users/patigeorgiana/Downloads/kafka_2.12-3.3.1/config/server.properties
