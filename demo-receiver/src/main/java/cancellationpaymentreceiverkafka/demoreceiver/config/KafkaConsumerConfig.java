@@ -13,4 +13,5 @@ public class KafkaConsumerConfig {
     private String groupId;
     private String keyDeserializer;
     private String valueDeserializer;
+    private String autoOffsetReset;
 }
