@@ -40,13 +40,13 @@ public class ConsumerService {
         propertiesProducer.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, kafkaProducerConfig.getKeySerializer());
         propertiesProducer.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, kafkaProducerConfig.getKeySerializer());
 
-        // Crearea consumatorului Kafka
-//        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
+//         Crearea consumatorului Kafka
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
 
-//        // Abonarea la topicul dorit (de exemplu, "payment_2023")
-//        String topic = "payment_2023";
-//        consumer.subscribe(Collections.singleton(topic));
-//
+        // Abonarea la topicul dorit (de exemplu, "payment_2023")
+        String topic = "payment_2023";
+        consumer.subscribe(Collections.singleton(topic));
+
 //        // Începerea buclei de consum pentru a prelua și procesa mesajele
 //        while (true) {
 //            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
@@ -55,22 +55,22 @@ public class ConsumerService {
 //                // Implementați logica de procesare a mesajului aici
 //            });
 //        }
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
-        String topic = "payment_2023";
-
+//        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
+//        String topic = "payment_2023";
+//
         KafkaProducer<String, String> producer = new KafkaProducer<>(propertiesProducer);
-
-        consumer.subscribe(Collections.singletonList(topic));
-
+//
+//        consumer.subscribe(Collections.singletonList(topic));
+//
         int mesajeDeConsumat = 10;
         int totalMesajeConsumate = 0;
-
+//
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(100);
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100)); // wait period
 
-            if (records.isEmpty()) {
-                continue;
-            }
+//            if (records.isEmpty()) {
+//                continue;
+//            }
 
             for (ConsumerRecord<String, String> record : records) {
                 System.out.println("Mesaj consumat: " + record.value());
@@ -101,7 +101,7 @@ public class ConsumerService {
             }
         }
 
-        consumer.close();
+//        consumer.close();
     }
 
     // Metoda de procesare a mesajului (doar un exemplu)

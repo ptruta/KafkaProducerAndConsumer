@@ -58,7 +58,7 @@ public class PaymentCancellationService {
         });
 
         // Închiderea producătorului
-//        producer.close();
+        producer.close();
 
 //        streamBridge.send(INPUT_PAYMENT_OUT_0, MessageBuilder.withPayload(payment)
 //                .setHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE)
