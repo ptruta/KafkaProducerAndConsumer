@@ -26,7 +26,7 @@ public class ConsumerService {
     private final KafkaProducerConfig kafkaProducerConfig;
 
     @KafkaListener(topics = "payment_2023")
-    public void consumeMessages() {
+    public void consumeMessages() throws InterruptedException {
         // Configurarea proprietăților consumatorului
         Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConsumerConfig.getBootstrapServers());
@@ -71,6 +71,15 @@ public class ConsumerService {
 //            if (records.isEmpty()) {
 //                continue;
 //            }
+            int numberOfElementsToBeProcessed = records.count();
+            if (numberOfElementsToBeProcessed <= 10) {
+                records.forEach(record -> {
+                    System.out.println("Mesaj consumat: " + record.value());
+                    // Implementați logica de procesare a mesajului aici
+                });
+            } else {
+                Thread.sleep(10);
+            }
 
             for (ConsumerRecord<String, String> record : records) {
                 System.out.println("Mesaj consumat: " + record.value());
