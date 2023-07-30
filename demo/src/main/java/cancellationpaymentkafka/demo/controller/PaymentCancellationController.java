@@ -6,14 +6,17 @@ import cancellationpaymentkafka.demo.model.Payment;
 import cancellationpaymentkafka.demo.service.PaymentCancellationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @Slf4j
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class PaymentCancellationController {
 
@@ -21,20 +24,27 @@ public class PaymentCancellationController {
 
     @PostMapping(value = {"/payment-cancellation"})
     public ResponseEntity<Void> paymentCancellation(
-            final @RequestBody Payment payment) throws UnsupportedPaymentException {
+            final @RequestBody @NotNull List<Payment> payments) throws UnsupportedPaymentException {
 
-        log.info("Received payment {}",
-                payment.getPayload());
+        payments.forEach(
+                payment -> {
+                    log.info("Received payment {}",
+                            payment.getPayload());
 
-        Payment paymentSupported =
-                paymentCancellationService.isSupported((payment));
-        if (paymentSupported == null) {
-            throw new UnsupportedPaymentException(
-                    String.format("The payment is not supported %s",
-                            payment));
-        }
-
-        paymentCancellationService.handle(payment);
+                    Payment paymentSupported =
+                            paymentCancellationService.isSupported((payment));
+                    if (paymentSupported == null) {
+                        try {
+                            throw new UnsupportedPaymentException(
+                                    String.format("The payment is not supported %s",
+                                            payment));
+                        } catch (UnsupportedPaymentException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                    paymentCancellationService.handle(payment);
+                }
+        );
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }

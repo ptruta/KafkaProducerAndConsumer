@@ -1,0 +1,43 @@
+{
+	"activeGroup":"Default",
+	"apiParamGroup":{},
+	"childList":[],
+	"description":"",
+	"directory":"~.fastRequest~collections~ROOT~demo~PaymentCancellationController",
+	"domain":"http://localhost:8080",
+	"enableEnv":"local",
+	"enableProject":"demo",
+	"filePath":"~.fastRequest~collections~ROOT~demo~PaymentCancellationController~paymentCancellation.rapi",
+	"headerList":[
+		{
+			"enabled":true,
+			"type":"Content-Type",
+			"value":"application/json\n\n"
+		}
+	],
+	"id":"api_cancellationpaymentkafka.demo.controller.PaymentCancellationController.paymentCancellation",
+	"name":"New Request",
+	"paramGroup":{
+		"bodyKeyValueListJson":"",
+		"className":"cancellationpaymentkafka.demo.controller.PaymentCancellationController",
+		"jsonDocument":"",
+		"method":"paymentCancellation",
+		"methodDescription":"New Request",
+		"methodType":"POST",
+		"multipartKeyValueListJson":"[]",
+		"originUrl":"/payment-cancellation",
+		"pathParamsKeyValueListJson":"[]",
+		"postScript":"",
+		"postType":"json",
+		"preScript":"",
+		"returnDocument":"{\"status\":{},\"body\":{}}",
+		"tempId":"",
+		"url":"/payment-cancellation",
+		"urlEncodedKeyValueListJson":"[]",
+		"urlEncodedKeyValueListText":"",
+		"urlParamsKeyValueListJson":"[]",
+		"urlParamsKeyValueListText":""
+	},
+	"tempId":"api_cancellationpaymentkafka.demo.controller.PaymentCancellationController.paymentCancellation",
+	"type":2
+}

@@ -34,3 +34,24 @@
 [2023-05-21T20:02:49.498+0300][gc,metaspace] GC(0) Metaspace: 8278K(8512K)->8278K(8512K) NonClass: 7399K(7488K)->7399K(7488K) Class: 879K(1024K)->879K(1024K)
 [2023-05-21T20:02:49.499+0300][gc          ] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 25M->8M(512M) 41.294ms
 [2023-05-21T20:02:49.499+0300][gc,cpu      ] GC(0) User=0.05s Sys=0.04s Real=0.04s
+[2023-06-12T12:47:25.130+0300][gc,start    ] GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+[2023-06-12T12:47:25.154+0300][gc,task     ] GC(1) Using 8 workers of 8 for evacuation
+[2023-06-12T12:47:25.230+0300][gc,mmu      ] GC(1) MMU target violated: 21.0ms (20.0ms/21.0ms)
+[2023-06-12T12:47:25.230+0300][gc,phases   ] GC(1)   Pre Evacuate Collection Set: 0.5ms
+[2023-06-12T12:47:25.230+0300][gc,phases   ] GC(1)   Merge Heap Roots: 0.2ms
+[2023-06-12T12:47:25.230+0300][gc,phases   ] GC(1)   Evacuate Collection Set: 71.4ms
+[2023-06-12T12:47:25.230+0300][gc,phases   ] GC(1)   Post Evacuate Collection Set: 1.3ms
+[2023-06-12T12:47:25.230+0300][gc,phases   ] GC(1)   Other: 2.9ms
+[2023-06-12T12:47:25.230+0300][gc,heap     ] GC(1) Eden regions: 21->0(24)
+[2023-06-12T12:47:25.230+0300][gc,heap     ] GC(1) Survivor regions: 4->1(4)
+[2023-06-12T12:47:25.230+0300][gc,heap     ] GC(1) Old regions: 4->8
+[2023-06-12T12:47:25.230+0300][gc,heap     ] GC(1) Archive regions: 2->2
+[2023-06-12T12:47:25.230+0300][gc,heap     ] GC(1) Humongous regions: 0->0
+[2023-06-12T12:47:25.230+0300][gc,metaspace] GC(1) Metaspace: 9398K(9600K)->9398K(9600K) NonClass: 8453K(8512K)->8453K(8512K) Class: 944K(1088K)->944K(1088K)
+[2023-06-12T12:47:25.230+0300][gc          ] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 29M->8M(512M) 99.925ms
+[2023-06-12T12:47:25.230+0300][gc,cpu      ] GC(1) User=0.01s Sys=0.02s Real=0.10s
+[2023-06-12T12:47:25.731+0300][gc,heap,exit] Heap
+[2023-06-12T12:47:25.731+0300][gc,heap,exit]  garbage-first heap   total 524288K, used 15121K [0x00000007e0000000, 0x0000000800000000)
+[2023-06-12T12:47:25.731+0300][gc,heap,exit]   region size 1024K, 7 young (7168K), 1 survivors (1024K)
+[2023-06-12T12:47:25.731+0300][gc,heap,exit]  Metaspace       used 9490K, committed 9728K, reserved 1114112K
+[2023-06-12T12:47:25.731+0300][gc,heap,exit]   class space    used 955K, committed 1088K, reserved 1048576K

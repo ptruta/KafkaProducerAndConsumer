@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestHistoryConfig">
+    <option name="historyList">
+      <list>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}" />
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 82&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}&#13;&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}" />
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 82&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}" />
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 82&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;type&quot;: &quot;C&quot;,&#10;  &quot;amount&quot;: &quot;100&quot;,&#10;  &quot;payload&quot;: &quot;payload&quot;,&#10;  &quot;isActive&quot;: &quot;true&quot;&#10;}&#13;&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="400" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;type&quot;: &quot;type_bl3tl&quot;,&#10;  &quot;amount&quot;: &quot;amount_lrsh2&quot;,&#10;  &quot;payload&quot;: &quot;payload_s5hk5&quot;,&#10;  &quot;isActive&quot;: true&#10;}" />
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 104&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;type&quot;: &quot;type_bl3tl&quot;,&#10;  &quot;amount&quot;: &quot;amount_lrsh2&quot;,&#10;  &quot;payload&quot;: &quot;payload_s5hk5&quot;,&#10;  &quot;isActive&quot;: true&#10;}&#13;&#10;" />
+          <option name="response" value="{&quot;errorCode&quot;:&quot;ERR-001&quot;,&quot;errorMessage&quot;:&quot;Error occurred. Service cannot be found: Invocation failure\nController [cancellationpaymentkafka.demo.controller.PaymentCancellationController]\nMethod [public org.springframework.http.ResponseEntity&lt;java.lang.Void&gt; cancellationpaymentkafka.demo.controller.PaymentCancellationController.paymentCancellation(cancellationpaymentkafka.demo.model.Payment) throws cancellationpaymentkafka.demo.exceptions.UnsupportedPaymentException] with argument values:\n [0] [type=cancellationpaymentkafka.demo.model.Payment] [value=Payment(type=type_bl3tl, amount=amount_lrsh2, payload=payload_s5hk5, isActive=false)] &quot;}" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="400" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;type&quot;: &quot;type_bl3tl&quot;,&#10;  &quot;amount&quot;: &quot;amount_lrsh2&quot;,&#10;  &quot;payload&quot;: &quot;payload_s5hk5&quot;,&#10;  &quot;isActive&quot;: true&#10;}" />
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Length: 104&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;type&quot;: &quot;type_bl3tl&quot;,&#10;  &quot;amount&quot;: &quot;amount_lrsh2&quot;,&#10;  &quot;payload&quot;: &quot;payload_s5hk5&quot;,&#10;  &quot;isActive&quot;: true&#10;}&#13;&#10;" />
+          <option name="response" value="{&quot;errorCode&quot;:&quot;ERR-001&quot;,&quot;errorMessage&quot;:&quot;Error occurred. Service cannot be found: Invocation failure\nController [cancellationpaymentkafka.demo.controller.PaymentCancellationController]\nMethod [public org.springframework.http.ResponseEntity&lt;java.lang.Void&gt; cancellationpaymentkafka.demo.controller.PaymentCancellationController.paymentCancellation(cancellationpaymentkafka.demo.model.Payment) throws cancellationpaymentkafka.demo.exceptions.UnsupportedPaymentException] with argument values:\n [0] [type=cancellationpaymentkafka.demo.model.Payment] [value=Payment(type=type_bl3tl, amount=amount_lrsh2, payload=payload_s5hk5, isActive=false)] &quot;}" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="400" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Type: application/json&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-07-30T15:28:19.290+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;path&quot;:&quot;/payment-cancellation&quot;}" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Type: application/json&#10;&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Illegal character(s) in message header value: application/json&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;    Content-Type: application/json&#10;&#10;&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="Illegal character(s) in message header value: application/json&#10;&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="415" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-07-30T15:25:23.692+00:00&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;path&quot;:&quot;/payment-cancellation&quot;}" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/payment-cancellation" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/payment-cancellation&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="url" value="/payment-cancellation" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="404" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-07-30T15:24:02.548+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/&quot;}" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="404" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-07-30T15:23:34.933+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/&quot;}" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+          <option name="code" value="404" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="demo" />
+          <option name="method" value="paymentCancellation" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="cancellationpaymentkafka.demo.controller.PaymentCancellationController" />
+              <option name="method" value="paymentCancellation" />
+              <option name="methodDescription" value="New Request" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/payment-cancellation" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;body&quot;:{}}" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 Hutool&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Accept-Language: zh-CN,zh;q=0.8&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2023-07-30T15:23:18.854+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/&quot;}" />
+        </ResponseHistory>
+      </list>
+    </option>
+  </component>
+</project>
