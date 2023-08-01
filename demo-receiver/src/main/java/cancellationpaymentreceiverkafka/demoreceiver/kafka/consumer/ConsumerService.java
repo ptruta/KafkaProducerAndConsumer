@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
+import java.util.Queue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Slf4j
 @Service
@@ -24,8 +27,10 @@ import java.util.Properties;
 public class ConsumerService {
     private final KafkaConsumerConfig kafkaConsumerConfig;
     private final KafkaProducerConfig kafkaProducerConfig;
+    private static Queue<ConsumerRecord<String, String>> queueInProgressCardRequests;
+    private static Queue<ConsumerRecord<String, String>> queueCardToProcessed;
 
-    @KafkaListener(topics = "payment_2023")
+    @KafkaListener(topics = {"payment_2023", "payment_2023_in_progress"})
     public void consumeMessages() throws InterruptedException {
         // Configurarea proprietăților consumatorului
         Properties properties = new Properties();
@@ -36,92 +41,53 @@ public class ConsumerService {
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, kafkaConsumerConfig.getAutoOffsetReset());
 
         Properties propertiesProducer = new Properties();
+
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
+
+        String inProgressTopic = "payment_2023";
+        String processedTopic = "payment_2023_in_progress";
+
+        consumer.subscribe(Collections.singleton(inProgressTopic));
+
+        int maxConcurrentMessages = 10;
+        ExecutorService executorService = Executors.newFixedThreadPool(maxConcurrentMessages);
+
+        while (true) {
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
+
+            for (ConsumerRecord<String, String> record : records) {
+                String message = record.value();
+                System.out.println("Received message from in-progress topic: " + message);
+
+                // Process each message using a separate thread from the thread pool
+                executorService.execute(() -> {
+                    // Simulate message processing delay
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    // Send the processed message to the "processed_topic"
+                    ProducerRecord<String, String> processedRecord = new ProducerRecord<>(processedTopic, message);
+                    KafkaProducer<String, String> producer = createProducer(propertiesProducer);
+                    producer.send(processedRecord);
+                    producer.close();
+                });
+            }
+
+            // Commit the offsets after processing the batch of records
+            consumer.commitSync();
+        }
+
+    }
+
+    private KafkaProducer<String, String> createProducer(Properties propertiesProducer) {
         propertiesProducer.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProducerConfig.getBootstrapServers());
         propertiesProducer.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, kafkaProducerConfig.getKeySerializer());
         propertiesProducer.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, kafkaProducerConfig.getKeySerializer());
 
-//         Crearea consumatorului Kafka
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
-
-        // Abonarea la topicul dorit (de exemplu, "payment_2023")
-        String topic = "payment_2023";
-        consumer.subscribe(Collections.singleton(topic));
-
-//        // Începerea buclei de consum pentru a prelua și procesa mesajele
-//        while (true) {
-//            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
-//            records.forEach(record -> {
-//                System.out.println("Mesaj consumat: " + record.value());
-//                // Implementați logica de procesare a mesajului aici
-//            });
-//        }
-//        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
-//        String topic = "payment_2023";
-//
-        KafkaProducer<String, String> producer = new KafkaProducer<>(propertiesProducer);
-//
-//        consumer.subscribe(Collections.singletonList(topic));
-//
-        int mesajeDeConsumat = 10;
-        int totalMesajeConsumate = 0;
-//
-        while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100)); // wait period
-
-//            if (records.isEmpty()) {
-//                continue;
-//            }
-            int numberOfElementsToBeProcessed = records.count();
-            if (numberOfElementsToBeProcessed <= 10) {
-                records.forEach(record -> {
-                    System.out.println("Mesaj consumat: " + record.value());
-                    // Implementați logica de procesare a mesajului aici
-                });
-            } else {
-                Thread.sleep(10);
-            }
-
-            for (ConsumerRecord<String, String> record : records) {
-                System.out.println("Mesaj consumat: " + record.value());
-                totalMesajeConsumate++;
-
-                try {
-                    // Procesarea mesajului
-                    processMessage(record.value());
-                } catch (Exception e) {
-                    System.err.println("Eroare la procesarea mesajului: " + e.getMessage());
-                    // În cazul unei erori, adăugăm mesajul în topicul de eroare
-                    producer.send(new ProducerRecord<>("mesaje-eroare", record.value()), (errorMetadata, errorException) -> {
-                        if (errorException == null) {
-                            System.out.println("Mesajul de eroare trimis: " + record.value());
-                        } else {
-                            System.err.println("Eroare la trimiterea mesajului de eroare: " + errorException.getMessage());
-                        }
-                    });
-                }
-
-                if (totalMesajeConsumate >= mesajeDeConsumat) {
-                    break;
-                }
-            }
-
-            if (totalMesajeConsumate >= mesajeDeConsumat) {
-                break;
-            }
-        }
-
-//        consumer.close();
-    }
-
-    // Metoda de procesare a mesajului (doar un exemplu)
-    private static void processMessage(String message) {
-        // Simulăm o eroare pentru mesajele cu numere pare
-        int numarMesaj = Integer.parseInt(message.split(" ")[1]);
-        if (numarMesaj % 2 == 0) {
-            throw new RuntimeException("Eroare la procesare");
-        }
-        // Procesare normală dacă nu există erori
-        System.out.println("Procesare mesaj: " + message);
+        return new KafkaProducer<>(propertiesProducer);
     }
 
 }
