@@ -119,7 +119,9 @@ Este important să luați în considerare faptul că Kafka asigură persistența
 
 În general, utilizarea Kafka pentru a implementa un sistem de cozi și mesaje este potrivită pentru scenarii distribuite și tolerante la erori. Cu toate acestea, este important să luați în considerare și alți factori, cum ar fi scalabilitatea și performanța sistemului, în funcție de cerințele specifice ale aplicației dvs.
 
-Desigur! Voi oferi un exemplu simplu pentru a ilustra cum puteți folosi Kafka pentru a implementa un sistem cu un producător care pune mesajele într-o coadă și un consumator care face dequeue doar la câte vrea.
+## Kafka Producer and Kafka Consumer approach
+
+Voi oferi un exemplu simplu pentru a ilustra cum puteți folosi Kafka pentru a implementa un sistem cu un producător care pune mesajele într-o coadă și un consumator care face dequeue doar la câte vrea.
 
 Presupunem că avem două microservicii: `ProducerService` și `ConsumerService`. Pentru a folosi Kafka, vom avea nevoie de biblioteca Kafka pentru Java, deci asigurați-vă că o aveți în proiectul dvs.
 
