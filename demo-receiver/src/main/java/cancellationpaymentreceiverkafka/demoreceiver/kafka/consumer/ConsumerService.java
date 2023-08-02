@@ -44,10 +44,10 @@ public class ConsumerService {
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
 
-        String inProgressTopic = "payment_2023";
-        String processedTopic = "payment_2023_in_progress";
+        String toProcessCardTopic = "payment_2023";
+        String inProgressRequestsTopic = "payment_2023_in_progress";
 
-        consumer.subscribe(Collections.singleton(inProgressTopic));
+        consumer.subscribe(Collections.singleton(toProcessCardTopic));
 
         int maxConcurrentMessages = 10;
         ExecutorService executorService = Executors.newFixedThreadPool(maxConcurrentMessages);
@@ -56,23 +56,26 @@ public class ConsumerService {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
             for (ConsumerRecord<String, String> record : records) {
-                String message = record.value();
-                System.out.println("Received message from in-progress topic: " + message);
+                final String[] message = {record.value()};
+                System.out.println("Received message from to process topic: " + message[0]);
 
                 // Process each message using a separate thread from the thread pool
                 executorService.execute(() -> {
                     // Simulate message processing delay
                     try {
                         Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+
+                        System.out.println(" Send the processed message to in progress topic: " + message[0]);
+
+                        processeMessage(message[0]);
+
+                        addToInProgressTopic(propertiesProducer, inProgressRequestsTopic, message[0]);
+                    } catch (InterruptedException | SvboException e) {
+                        System.out.println(" Send the processed message to process topic because of error: " + message[0]);
+                        message[0] = message[0].replace("error", "nada");
+                        addToProcessedTopic(propertiesProducer, toProcessCardTopic, message[0]);
                     }
 
-                    // Send the processed message to the "processed_topic"
-                    ProducerRecord<String, String> processedRecord = new ProducerRecord<>(processedTopic, message);
-                    KafkaProducer<String, String> producer = createProducer(propertiesProducer);
-                    producer.send(processedRecord);
-                    producer.close();
                 });
             }
 
@@ -82,6 +85,30 @@ public class ConsumerService {
 
     }
 
+    private void processeMessage(String message) {
+        // call to svbo
+        // simulate exception
+        if (message.contains("error")) {
+            throw new SvboException("eroare la procesare svbo");
+        }
+    }
+
+    private void addToInProgressTopic(Properties propertiesProducer, String inProgressRequestsTopic, String message) {
+        // Send the processed message to the "in_progress_topic"
+        ProducerRecord<String, String> processedRecord = new ProducerRecord<>(inProgressRequestsTopic, message);
+        KafkaProducer<String, String> producer = createProducer(propertiesProducer);
+        producer.send(processedRecord);
+        producer.close();
+    }
+
+    private void addToProcessedTopic(Properties propertiesProducer, String processedTopic, String message) {
+        // Send the processed message to the "processed topic"
+        ProducerRecord<String, String> processedRecord = new ProducerRecord<>(processedTopic, message);
+        KafkaProducer<String, String> producer = createProducer(propertiesProducer);
+        producer.send(processedRecord);
+        producer.close();
+    }
+
     private KafkaProducer<String, String> createProducer(Properties propertiesProducer) {
         propertiesProducer.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProducerConfig.getBootstrapServers());
         propertiesProducer.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, kafkaProducerConfig.getKeySerializer());
@@ -89,5 +116,4 @@ public class ConsumerService {
 
         return new KafkaProducer<>(propertiesProducer);
     }
-
 }
